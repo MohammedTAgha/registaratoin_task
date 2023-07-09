@@ -20,6 +20,9 @@ const StyledContainer = styled.div`
   border: ${(props) => props.border || "none"};
   border-radius: ${(props) => props.borderRadius || "0"};
   box-shadow: ${(props) => props.boxShadow || "none"};
+  background-image: ${(props) => (props.backgroundImage ? `url(${props.backgroundImage})` : "none")};
+  background-size: cover;
+  background-position: center;
 `;
 
 export default class Container extends Component {

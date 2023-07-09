@@ -1,0 +1,9 @@
+.intro{
+    max-width: 30rem;
+    
+}
+
+.corner{
+    z-index: 1000;
+    align-self: flex-end;
+}

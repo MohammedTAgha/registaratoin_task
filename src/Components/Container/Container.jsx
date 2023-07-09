@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  width: ${(props) => props.width || "100%"};
+  width: ${(props) => props.width || "fit-content"};
+  hieght: ${(props) => props.hieght || "fit-content"};
   display: flex;
   flex-direction: ${(props) => (props.row ? "row" : "column")};
   justify-content: ${(props) =>

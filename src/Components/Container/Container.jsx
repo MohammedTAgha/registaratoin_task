@@ -25,11 +25,11 @@ const StyledContainer = styled.div`
   background-image: ${(props) => (props.backgroundImage ? `url(${props.backgroundImage})` : "none")};
   background-size: cover;
   background-position: center;
-
+  z-index: 0;
   &::before {
     content: "";
     position: absolute;
-
+    
     top: 0;
     right: 0;
     bottom: 0;

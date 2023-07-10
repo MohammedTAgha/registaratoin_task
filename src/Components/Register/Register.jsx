@@ -8,6 +8,7 @@ import colors from "../../styles/color";
 import styles from '../../styles/styles.module.css'
 export default class Register extends Component {
   render() {
+  const { handleGoToLogIn } = this.props;
     return (
       <Container width={"100vw"} height={"100vh"} row>
         <div className={st.logo}>
@@ -19,7 +20,9 @@ export default class Register extends Component {
           backgroundImage={bg}
           overlayColor="rgba(0, 0, 255, 0.3)"
         >
-          <Qute />
+          <Qute text ="I always observe the people who pass by when I ride an escalator. I'll never see most of them again, so I imagine a lot of things about their lives... about the day ahead of them."
+          title = "Hideo Kojima"
+           />
         </Container>
         <Container width={"65%"} >
           <Container width="53%" rowGap={"14px"}>
@@ -59,6 +62,7 @@ export default class Register extends Component {
               shadow
               fontSize="20px"
               title="login"
+              onClick={handleGoToLogIn}
             />
           </Container>
         </Container>

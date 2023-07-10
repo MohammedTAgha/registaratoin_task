@@ -1,0 +1,16 @@
+.logo{
+    position: absolute;
+    top: 70px;
+    left: 80px;
+    z-index: 120;
+    height: fit-content;
+}
+.stick{
+    position: absolute;
+    right: 0;
+    width: 336px;
+    height: 400px;
+    /* bottom: 94px; */
+    align-self: flex-end;
+    z-index: -1;
+}

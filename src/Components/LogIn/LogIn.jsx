@@ -59,10 +59,11 @@ export default class LogIn extends Component {
 
             />
            <Container row>
-           <Label color={colors.label}>
+  
+           <Label color={colors.label} style={{cursor:"pointer"}}>
            Don’t have an account?   
             </Label>
-            <Label color={colors.primary}>
+            <Label color={colors.primary} onClick={handleGoToRegister}>
              Register
             </Label>
            </Container>

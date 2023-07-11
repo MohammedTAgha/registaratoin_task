@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Container, InputComponent, Logo, Qute } from "..";
+import { Button, Container, InputComponent, Logo, Qute, SocialCard } from "..";
 import bg from "../../assets/bg.png";
 import st from "./LogIn.module.css";
 import logoLarge from "../../assets/logoLarge.png";
@@ -7,6 +7,10 @@ import { Body, Heading, Label } from "../Typo";
 import colors from "../../styles/color";
 import stick from '../../assets/stick.png'
 import styles from '../../styles/styles.module.css'
+import g from '../../assets/flat-color-icons_google.png'
+import t from '../../assets/logos_twitter.png'
+import i from '../../assets/cib_linkedin-in.png'
+import git from '../../assets/ant-design_github-filled.png'
 export default class LogIn extends Component {
   render() {
   const { handleGoToRegister } = this.props;
@@ -38,6 +42,12 @@ export default class LogIn extends Component {
             <Body color="#8692A6">
             Go inside the best gamers social network!
             </Body>
+            <Container width="100%" justifyContent="space-around" row >
+              <SocialCard iconSrc={g}/>
+              <SocialCard iconSrc={t}/>
+              <SocialCard iconSrc={i}/>
+              <SocialCard iconSrc={git}/>
+            </Container>
             <InputComponent
               label="Your Email*"
               type="email"

@@ -45,7 +45,7 @@ export const Label = styled.span`
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-style: normal;
-  font-weight: ${(props) => props.fontWeight || 500};
+  font-weight: ${(props) => props.fontWeight || "normal"};
   line-height: normal;
   color: ${(props) =>
     props.status === "invalid"

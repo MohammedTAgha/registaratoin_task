@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Container from "../Container/Container";
 import { Label } from "../Typo";
+import { validateInput } from "../../utils/utils";
+import colors from "../../styles/color";
 
 const InputField = styled.input`
   font-family: "Inter", sans-serif;
@@ -18,11 +20,33 @@ const InputField = styled.input`
   color: #000;
 `;
 
-const InputComponent = ({ label, ...props }) => {
+const InputComponent = ({ label, type, isValid, message, ...props }) => {
+  const [value, setValue] = useState("");
+  const [error, setError] = useState("");
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+    setValue(inputValue);
+    setError("");
+  };
+  const validateInputValue = () => {
+    console.log("checking")
+    const validation = validateInput(value, type);
+    if (!validation.isValid) {
+      setError(validation.message);
+    } else {
+      setError("");
+    }
+  };
   return (
     <Container alignItems="flex-start" rowGap={"6px"} width="100%">
       <Label color="#696f79">{label}</Label>
-      <InputField {...props} />
+      <InputField
+        {...props}
+        type={type}
+        onChange={handleInputChange}
+        onBlur={validateInputValue}
+      />
+      {error && <Label color={colors.warning}>{error}</Label>}
     </Container>
   );
 };
